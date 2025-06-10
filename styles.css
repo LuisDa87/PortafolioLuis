@@ -1,12 +1,12 @@
-/* Variables CSS para colores, espaciados y ancho máximo */
+/* Variables CSS para colores y espaciados */
 :root {
-    --primary-color: #7600e4; /* Morado primario */
-    --secondary-color: #f004bd; /* Rosado secundario */
-    --white-color: #ffffff; /* Blanco */
-    --dark-text-color: #999999; /* Gris oscuro para texto */
-    --light-gray-bg: #e2e2e2; /* Fondo gris claro */
-    --text-dark: #333; /* Texto oscuro general */
-    --text-light: #666; /* Texto claro general */
+    --primary-color: #7600e4;
+    --secondary-color: #f004bd;
+    --white-color: #ffffff;
+    --dark-text-color: #999999;
+    --light-gray-bg: #e2e2e2;
+    --text-dark: #333;
+    --text-light: #666;
 
     /* Espaciados */
     --spacing-xs: 5px;
@@ -18,55 +18,52 @@
     --max-width: 1200px; /* Ancho máximo del contenido */
 }
 
-/* Reset CSS básico para todos los elementos */
+/* Reset CSS básico */
 *,
 *::before,
 *::after {
-    box-sizing: border-box; /* Modelo de caja uniforme */
-    margin: 0; /* Elimina márgenes por defecto */
-    padding: 0; /* Elimina paddings por defecto */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Estilos globales del cuerpo */
+/* Estilos globales */
 body {
-    font-family: 'Roboto', sans-serif; /* Fuente principal */
-    line-height: 1.6; /* Altura de línea para legibilidad */
-    color: var(--text-dark); /* Color de texto predeterminado */
-    background-color: var(--white-color); /* Fondo blanco */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white-color);
 }
 
-/* Estilos de enlaces */
 a {
-    text-decoration: none; /* Sin subrayado */
-    color: var(--primary-color); /* Color primario */
-    transition: color 0.3s ease; /* Transición suave al hover */
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--secondary-color); /* Color secundario al hover */
+    color: var(--secondary-color);
 }
 
-/* Estilos de imágenes */
 img {
-    max-width: 100%; /* Imágenes responsivas */
-    height: auto; /* Mantiene la proporción */
-    display: block; /* Elimina espacio extra debajo de las imágenes */
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Estilos generales para botones */
+/* Estilos de botones */
 .btn {
-    padding: var(--spacing-sm) var(--spacing-md); /* Espaciado interno */
-    border: none; /* Sin borde */
-    border-radius: 25px; /* Bordes redondeados */
-    cursor: pointer; /* Cursor de puntero */
-    font-size: 1em; /* Tamaño de fuente */
-    font-weight: bold; /* Texto en negrita */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
-    display: inline-block; /* Comportamiento de bloque en línea */
-    text-align: center; /* Texto centrado */
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
 }
 
-/* Botón primario */
 .btn--primary {
     background-color: var(--primary-color);
     color: var(--white-color);
@@ -74,47 +71,46 @@ img {
 
 .btn--primary:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-2px); /* Efecto de elevación */
+    transform: translateY(-2px);
 }
 
-/* Botón para añadir/ver proyectos */
 .btn--add {
     background-color: var(--dark-text-color);
     color: var(--white-color);
     margin-top: var(--spacing-sm);
-    width: calc(100% - (var(--spacing-sm) * 2)); /* Ajusta el ancho, considerando padding */
+    width: calc(100% - (var(--spacing-sm) * 2));
 }
 
 .btn--add:hover {
     background-color: #170429;
-    transform: translateY(-2px); /* Efecto de elevación */
+    transform: translateY(-2px);
 }
 
-/* --- Animaciones CSS --- */
+/* Animaciones CSS */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in {
-    animation: fadeIn 0.5s ease-out forwards; /* Animación de aparición */
-    opacity: 0; /* Inicialmente invisible */
+    animation: fadeIn 0.5s ease-out forwards;
+    opacity: 0;
 }
 
 /* --- Encabezado --- */
 .header {
     background-color: var(--white-color);
     border-bottom: 1px solid var(--light-gray-bg);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .header__nav {
-    display: flex; /* Flexbox para alineación */
-    justify-content: space-between; /* Espacio entre elementos */
-    align-items: center; /* Alineación vertical */
+    display: flex; /* Flexbox para navegación */
+    justify-content: space-between;
+    align-items: center;
     padding: var(--spacing-sm) var(--spacing-md);
-    max-width: var(--max-width); /* Ancho máximo */
-    margin: 0 auto; /* Centrar el contenido */
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
 .header__logo p {
@@ -124,9 +120,9 @@ img {
 }
 
 .header__menu-links {
-    list-style: none; /* Quita viñetas de lista */
-    display: flex; /* Flexbox para los enlaces */
-    gap: var(--spacing-md); /* Espacio entre enlaces */
+    list-style: none;
+    display: flex; /* Flexbox para enlaces del menú */
+    gap: var(--spacing-md);
 }
 
 .header__menu-links a {
@@ -138,8 +134,8 @@ img {
     color: var(--primary-color);
 }
 
+/* Botón de menú móvil, se controla su visibilidad con JavaScript */
 .header__menu-toggle {
-    display: none; /* Oculto por defecto en desktop */
     background: none;
     border: none;
     font-size: 1.5em;
@@ -149,22 +145,22 @@ img {
 
 /* --- Carrusel Hero --- */
 .hero-carousel {
-    position: relative; /* Para posicionar elementos internos */
+    position: relative;
     width: 100%;
-    overflow: hidden; /* Oculta el desbordamiento de las imágenes */
+    overflow: hidden;
     margin-bottom: var(--spacing-xl);
-    height: 550px; /* Altura fija del carrusel */
+    height: 550px;
 }
 
 .carousel-container {
-    display: flex; /* Flexbox para organizar los slides */
+    display: flex; /* Flexbox para los slides */
     height: 100%;
-    transition: transform 0.8s ease-in-out; /* Transición de movimiento */
+    transition: transform 0.8s ease-in-out;
 }
 
 .carousel-slide {
-    min-width: 100%; /* Cada slide ocupa el 100% del contenedor */
-    flex-shrink: 0; /* Evita que los slides se encojan */
+    min-width: 100%;
+    flex-shrink: 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -175,43 +171,43 @@ img {
 }
 
 .carousel-slide img {
-    position: absolute; /* Posicionamiento absoluto para cubrir el slide */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cubre el área manteniendo proporción */
-    filter: brightness(0.7); /* Oscurece la imagen */
+    object-fit: cover;
+    filter: brightness(0.7);
 }
 
 .carousel-dots {
     position: absolute;
     bottom: var(--spacing-md);
     left: 50%;
-    transform: translateX(-50%); /* Centra los puntos */
-    display: flex;
-    gap: var(--spacing-sm); /* Espacio entre los puntos */
-    z-index: 2; /* Asegura que estén por encima de la imagen */
+    transform: translateX(-50%);
+    display: flex; /* Flexbox para los puntos */
+    gap: var(--spacing-sm);
+    z-index: 2;
 }
 
 .dot {
     width: 12px;
     height: 12px;
-    background-color: rgba(255, 255, 255, 0.5); /* Color de puntos inactivos */
-    border-radius: 50%; /* Puntos circulares */
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .dot.active {
-    background-color: var(--white-color); /* Color de punto activo */
-    transform: scale(1.2); /* Aumenta el tamaño del punto activo */
+    background-color: var(--white-color);
+    transform: scale(1.2);
 }
 
 /* --- Contenido Principal --- */
 .main-content {
-    max-width: var(--max-width); /* Ancho máximo */
-    margin: 0 auto; /* Centrar contenido */
+    max-width: var(--max-width);
+    margin: 0 auto;
     padding: var(--spacing-md);
 }
 
@@ -226,10 +222,10 @@ img {
 
 .category-list {
     list-style: none;
-    display: flex; /* Flexbox para los elementos */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-    justify-content: center; /* Centra los elementos */
-    gap: var(--spacing-md); /* Espacio entre elementos */
+    display: flex; /* Flexbox para la lista de categorías */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-md);
 }
 
 .category-list li a {
@@ -245,7 +241,7 @@ img {
 .category-list li a:hover {
     background-color: var(--primary-color);
     color: var(--white-color);
-    transform: translateY(-2px); /* Efecto de elevación */
+    transform: translateY(-2px);
 }
 
 /* Estilos generales para secciones */
@@ -262,19 +258,19 @@ img {
     color: var(--primary-color);
     text-align: center;
     margin-bottom: var(--spacing-lg);
-    border-bottom: 2px solid var(--primary-color); /* Línea decorativa */
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: var(--spacing-sm);
-    display: inline-block; /* Ajusta el ancho al contenido */
+    display: inline-block;
     width: auto;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Grid para productos/habilidades/proyectos */
+/* Grid para tarjetas de productos/habilidades */
 .product-grid {
-    display: grid; /* Display Grid para la disposición */
+    display: grid; /* CSS Grid para el diseño de tarjetas */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
-    gap: var(--spacing-md); /* Espacio entre celdas */
+    gap: var(--spacing-md);
     padding: var(--spacing-sm);
 }
 
@@ -285,15 +281,15 @@ img {
     overflow: hidden;
     text-align: center;
     padding: var(--spacing-sm);
-    display: flex; /* Flexbox para contenido interno de la tarjeta */
-    flex-direction: column; /* Apila el contenido verticalmente */
-    justify-content: space-between; /* Espacio entre elementos */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Efectos al hover */
+    display: flex; /* Flexbox para contenido de tarjeta */
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .product-card:hover {
-    transform: translateY(-5px); /* Efecto de elevación */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Sombra al hover */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
 .product-card__image {
@@ -311,7 +307,7 @@ img {
     margin-bottom: var(--spacing-xs);
 }
 
-.product-card__description { /* Usado para texto debajo del título en tarjetas */
+.product-card__description {
     font-size: 1.0em;
     color: var(--text-light);
     margin-bottom: var(--spacing-sm);
@@ -362,7 +358,7 @@ img {
 }
 
 .footer__brand-info,
-.footer__nav, /* Cambiado de footer__nav-bottom a footer__nav */
+.footer__nav,
 .footer__developer-info {
     flex-basis: 100%; /* Ocupa todo el ancho en mobile por defecto */
     margin-bottom: var(--spacing-md);
@@ -394,100 +390,55 @@ img {
     color: rgba(255,255,255,0.5);
 }
 
-/* --- Media Queries para responsividad --- */
+/* --- Media Queries (simplificadas) --- */
 
-/* Tabletas (768px a 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .header__menu-links {
-        gap: var(--spacing-sm);
-    }
-
-    .hero-carousel {
-        height: 350px; /* Altura ajustada para tabletas */
-    }
-
-    .category-list {
-        justify-content: flex-start; /* Alinea al inicio en tabletas */
-        gap: var(--spacing-sm);
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 220px mínimo en tabletas */
-    }
-
-    .section__title {
-        font-size: 1.8em;
-    }
-
-    .footer__content {
-        flex-direction: column; /* Apila los elementos en columna */
-    }
-
-    .footer__brand-info,
-    .footer__nav,
-    .footer__developer-info {
-        flex-basis: auto; /* Ancho automático */
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* Móviles (hasta 767px) */
-@media (max-width: 767px) {
+/* Ajustes para pantallas más pequeñas (móviles y tabletas) */
+@media (max-width: 1023px) {
     body {
-        font-size: 14px; /* Tamaño de fuente base más pequeño */
+        font-size: 15px; /* Tamaño de fuente ligeramente más pequeño */
     }
 
-    .main-content {
-        padding: var(--spacing-sm); /* Menos padding en móviles */
-    }
-
-    .header__nav { /* Cambiado de header__nav-top a header__nav */
+    .header__nav {
         flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-        justify-content: center;
-        padding: var(--spacing-sm);
+        justify-content: center; /* Centra el logo */
+        text-align: center;
     }
 
     .header__logo {
         width: 100%;
-        text-align: center; /* Centra el logo */
         margin-bottom: var(--spacing-sm);
     }
 
+    /* Oculta los enlaces del menú por defecto, se maneja con JS */
     .header__menu-links {
-        display: none; /* Oculta el menú por defecto en móviles */
-        flex-direction: column; /* Apila los enlaces verticalmente */
+        display: none;
+        flex-direction: column;
         width: 100%;
-        text-align: center;
         gap: var(--spacing-xs);
         padding: var(--spacing-sm) 0;
         background-color: var(--light-gray-bg);
     }
 
+    /* Clase para mostrar el menú con JS */
     .header__menu-links.active {
-        display: flex; /* Muestra el menú cuando está activo */
+        display: flex;
     }
 
+    /* Muestra el botón de menú móvil */
     .header__menu-toggle {
-        display: block; /* Muestra el botón del menú móvil */
-        position: absolute; /* Posiciona el botón */
+        display: block;
+        position: absolute;
         right: var(--spacing-md);
         top: var(--spacing-md);
     }
 
     .hero-carousel {
-        height: 250px; /* Altura más pequeña para móviles */
-        margin-bottom: var(--spacing-lg);
-    }
-
-    .category-nav {
-        padding: var(--spacing-sm);
+        height: 300px; /* Altura ajustada para pantallas más pequeñas */
     }
 
     .category-list {
-        flex-direction: column; /* Apila los elementos verticalmente */
-        align-items: center; /* Centra los elementos */
-        gap: var(--spacing-sm);
+        flex-direction: column; /* Apila las categorías verticalmente */
+        align-items: center;
     }
 
     .category-list li a {
@@ -495,35 +446,27 @@ img {
         text-align: center;
     }
 
-    .section__title {
-        font-size: 1.5em; /* Tamaño de título más pequeño */
-        margin-bottom: var(--spacing-md);
-    }
-
     .product-grid {
-        grid-template-columns: 1fr; /* Una sola columna en móviles */
-        gap: var(--spacing-md);
-    }
-
-    .product-card {
-        padding: var(--spacing-md);
-    }
-
-    .product-card__image {
-        height: 200px; /* Altura ajustada para imágenes de tarjeta */
-    }
-
-    .info-banner__image {
-        height: 150px; /* Altura ajustada para la imagen de "Acerca de mí" */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste de columnas para menor tamaño */
     }
 
     .footer__content {
         flex-direction: column; /* Apila elementos del footer */
-        text-align: center;
     }
 
     .footer__list {
         flex-direction: column;
         gap: var(--spacing-xs);
+    }
+}
+
+/* Ajustes para pantallas aún más pequeñas (solo móviles) */
+@media (max-width: 767px) {
+    .hero-carousel {
+        height: 200px; /* Altura más pequeña para móviles puros */
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
     }
 }
