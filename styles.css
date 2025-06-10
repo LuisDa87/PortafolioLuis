@@ -8,11 +8,11 @@
 }
 
 :root {
-    --primary-color: #0089e4; /* Used for main accents, titles, links */
-    --secondary-color: #041cf0; /* Darker shade for hover states */
-    --white-color: #FFFFFF;
-    --dark-text-color: #222222;
-    --light-gray-bg: #f5f5f5;
+    --primary-color: #7600e4; /* Used for main accents, titles, links */
+    --secondary-color: #f004bd; /* Darker shade for hover states */
+    --white-color: #ffffff;
+    --dark-text-color: #999999;
+    --light-gray-bg: #e2e2e2;
     --text-dark: #333;
     --text-light: #666;
     --spacing-xs: 5px;
@@ -76,7 +76,7 @@ img {
 }
 
 .btn--add:hover {
-    background-color: #000;
+    background-color: #8012e7;
     transform: translateY(-2px);
 }
 
