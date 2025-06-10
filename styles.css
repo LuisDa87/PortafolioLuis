@@ -38,7 +38,7 @@ body {
 a {
     text-decoration: none;
     color: var(--primary-color);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Transición suave en color para enlaces */
 }
 
 a:hover {
@@ -59,7 +59,7 @@ img {
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave para botones */
     display: inline-block;
     text-align: center;
 }
@@ -71,7 +71,7 @@ img {
 
 .btn--primary:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Pequeño levantamiento al pasar el ratón */
 }
 
 .btn--add {
@@ -83,18 +83,24 @@ img {
 
 .btn--add:hover {
     background-color: #170429;
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Pequeño levantamiento al pasar el ratón */
 }
 
-/* Animaciones CSS */
+/* Animación de entrada: Fade In */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Empieza un poco abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-fade-in {
-    animation: fadeIn 0.5s ease-out forwards;
-    opacity: 0;
+    opacity: 0; /* Inicialmente oculto */
+    animation: fadeIn 0.6s ease-out forwards; /* Aplica la animación fadeIn */
 }
 
 /* --- Encabezado --- */
@@ -105,7 +111,7 @@ img {
 }
 
 .header__nav {
-    display: flex; /* Flexbox para navegación */
+    display: flex; /* Flexbox para la barra de navegación */
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-sm) var(--spacing-md);
@@ -121,7 +127,7 @@ img {
 
 .header__menu-links {
     list-style: none;
-    display: flex; /* Flexbox para enlaces del menú */
+    display: flex; /* Flexbox para los enlaces del menú */
     gap: var(--spacing-md);
 }
 
@@ -153,7 +159,7 @@ img {
 }
 
 .carousel-container {
-    display: flex; /* Flexbox para los slides */
+    display: flex; /* Flexbox para los slides del carrusel */
     height: 100%;
     transition: transform 0.8s ease-in-out;
 }
@@ -185,7 +191,7 @@ img {
     bottom: var(--spacing-md);
     left: 50%;
     transform: translateX(-50%);
-    display: flex; /* Flexbox para los puntos */
+    display: flex; /* Flexbox para los puntos del carrusel */
     gap: var(--spacing-sm);
     z-index: 2;
 }
@@ -269,7 +275,7 @@ img {
 /* Grid para tarjetas de productos/habilidades */
 .product-grid {
     display: grid; /* CSS Grid para el diseño de tarjetas */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-md);
     padding: var(--spacing-sm);
 }
@@ -281,14 +287,14 @@ img {
     overflow: hidden;
     text-align: center;
     padding: var(--spacing-sm);
-    display: flex; /* Flexbox para contenido de tarjeta */
+    display: flex; /* Flexbox para el contenido de cada tarjeta */
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación sutil al pasar el ratón */
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02); /* Levanta y agranda ligeramente al pasar el ratón */
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
@@ -360,7 +366,7 @@ img {
 .footer__brand-info,
 .footer__nav,
 .footer__developer-info {
-    flex-basis: 100%; /* Ocupa todo el ancho en mobile por defecto */
+    flex-basis: 100%; /* Ocupa todo el ancho en móvil por defecto */
     margin-bottom: var(--spacing-md);
 }
 
@@ -371,7 +377,7 @@ img {
 
 .footer__list {
     list-style: none;
-    display: flex; /* Flexbox para la lista de enlaces */
+    display: flex; /* Flexbox para la lista de enlaces del footer */
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing-md);
@@ -392,15 +398,15 @@ img {
 
 /* --- Media Queries (simplificadas) --- */
 
-/* Ajustes para pantallas más pequeñas (móviles y tabletas) */
+/* Ajustes para pantallas más pequeñas (hasta 1023px) */
 @media (max-width: 1023px) {
     body {
-        font-size: 15px; /* Tamaño de fuente ligeramente más pequeño */
+        font-size: 15px;
     }
 
     .header__nav {
-        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
-        justify-content: center; /* Centra el logo */
+        flex-wrap: wrap;
+        justify-content: center;
         text-align: center;
     }
 
@@ -409,7 +415,7 @@ img {
         margin-bottom: var(--spacing-sm);
     }
 
-    /* Oculta los enlaces del menú por defecto, se maneja con JS */
+    /* Los enlaces del menú se ocultan por defecto y se muestran con JS */
     .header__menu-links {
         display: none;
         flex-direction: column;
@@ -419,12 +425,12 @@ img {
         background-color: var(--light-gray-bg);
     }
 
-    /* Clase para mostrar el menú con JS */
+    /* Clase para mostrar el menú cuando JS la activa */
     .header__menu-links.active {
         display: flex;
     }
 
-    /* Muestra el botón de menú móvil */
+    /* El botón de hamburguesa se muestra en pantallas pequeñas */
     .header__menu-toggle {
         display: block;
         position: absolute;
@@ -433,25 +439,25 @@ img {
     }
 
     .hero-carousel {
-        height: 300px; /* Altura ajustada para pantallas más pequeñas */
+        height: 300px;
     }
 
     .category-list {
-        flex-direction: column; /* Apila las categorías verticalmente */
+        flex-direction: column;
         align-items: center;
     }
 
     .category-list li a {
-        width: 100%; /* Ocupa todo el ancho disponible */
+        width: 100%;
         text-align: center;
     }
 
     .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste de columnas para menor tamaño */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
     .footer__content {
-        flex-direction: column; /* Apila elementos del footer */
+        flex-direction: column;
     }
 
     .footer__list {
@@ -460,10 +466,10 @@ img {
     }
 }
 
-/* Ajustes para pantallas aún más pequeñas (solo móviles) */
+/* Ajustes para pantallas aún más pequeñas (hasta 767px) */
 @media (max-width: 767px) {
     .hero-carousel {
-        height: 200px; /* Altura más pequeña para móviles puros */
+        height: 200px;
     }
 
     .product-grid {
