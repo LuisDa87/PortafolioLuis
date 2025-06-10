@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venta de Motos GP</title>
+    <style>
+      /* --- Colores MotoGP ---
+        Azul Oscuro: #0D274D (Un azul profundo y serio)
+        Rojo Vibrante: #D40000 (Un rojo de carreras)
+        Blanco/Gris Claro para texto/fondos: #FFFFFF / #F0F0F0
+        Gris Oscuro para texto secundario: #333333
+        */
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif; /* Fuente legible y común */
+        background-color: #f0f0f0; /* Fondo general gris claro */
+        color: #333333;
+        line-height: 1.6;
+      }
+
+      .top-bar {
+        background-color: #0d274d; /* Azul Oscuro */
+        color: #ffffff;
+        padding: 0.5em 0;
+        text-align: center;
+        font-size: 0.9em;
+      }
+      .top-bar a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 10px;
+      }
+      .top-bar a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        background-color: #d40000; /* Rojo Vibrante */
+        color: #ffffff;
+        padding: 2em 0;
+        text-align: center;
+        border-bottom: 5px solid #0d274d; /* Borde Azul Oscuro */
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.8em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      header .subtitle {
+        font-size: 1.2em;
+        margin-top: 0.5em;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 2em auto; /* Más margen superior/inferior */
+        padding: 0 20px;
+      }
+
+      .moto-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px; /* Espacio entre tarjetas de moto */
+      }
+
+      .moto-card {
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+        overflow: hidden; /* Para que la imagen no se salga del borde redondeado */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .moto-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .moto-card img {
+        width: 100%;
+        height: 220px; /* Altura fija para las imágenes */
+        object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+        border-bottom: 3px solid #d40000; /* Borde Rojo */
+      }
+
+      .moto-info {
+        padding: 20px;
+        flex-grow: 1; /* Para que el contenido de texto ocupe el espacio restante */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .moto-info h3 {
+        margin-top: 0;
+        margin-bottom: 0.5em;
+        font-size: 1.6em;
+        color: #0d274d; /* Azul Oscuro */
+      }
+
+      .moto-info .description {
+        font-size: 0.95em;
+        color: #555555;
+        margin-bottom: 1em;
+        flex-grow: 1;
+      }
+
+      .moto-info .price {
+        font-size: 1.7em;
+        font-weight: bold;
+        color: #d40000; /* Rojo Vibrante */
+        margin-bottom: 0.75em;
+        align-self: flex-start; /* Alinea el precio a la izquierda */
+      }
+
+      .moto-info .btn-comprar {
+        display: inline-block;
+        background-color: #0d274d; /* Azul Oscuro */
+        color: #ffffff;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        align-self: flex-start; /* Alinea el botón a la izquierda */
+      }
+
+      .moto-info .btn-comprar:hover {
+        background-color: #081a32; /* Un azul un poco más oscuro */
+      }
+
+      footer {
+        background-color: #0d274d; /* Azul Oscuro */
+        color: #dddddd;
+        text-align: center;
+        padding: 1.5em 0;
+        margin-top: 3em;
+        font-size: 0.9em;
+      }
+      footer p {
+        margin: 0;
+      }
+      footer a {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+      footer a:hover {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-bar">
+      <span
+        >Ofertas Especiales de MotoGP! |
+        <a href="index.html">Volver al Portafolio Principal</a></span
+      >
+    </div>
+
+    <header>
+      <h1>SuperMotos GP</h1>
+      <p class="subtitle">
+        Tu concesionario de alta cilindrada inspirado en la competición
+      </p>
+    </header>
+
+    <div class="container">
+      <div class="moto-grid">
+        <div class="moto-card">
+          <img src="images/GP_R1000.jpg" alt="MotoGP R1000 Superbike" />
+          <div class="moto-info">
+            <h3>GP R1000 Superbike</h3>
+            <p class="description">
+              La bestia de la pista, ahora homologada para la calle. Motor de 4
+              cilindros en línea, 998cc, con tecnología derivada directamente de
+              MotoGP. Control de tracción, modos de conducción y frenos Brembo
+              de última generación.
+            </p>
+            <p class="price">$22,500 USD</p>
+            <a href="#" class="btn-comprar">Consultar Disponibilidad</a>
+          </div>
+        </div>
+
+        <div class="moto-card">
+          <img src="images/Street_750.jpg" alt="Street Racer 750" />
+          <div class="moto-info">
+            <h3>Street Racer 750</h3>
+            <p class="description">
+              Agilidad y potencia en un paquete perfecto para la ciudad y
+              escapadas de fin de semana. Motor bicilíndrico de 749cc, chasis
+              ligero y una estética agresiva que no pasa desapercibida. Ideal
+              para pilotos experimentados.
+            </p>
+            <p class="price">$14,800 USD</p>
+            <a href="#" class="btn-comprar">Consultar Disponibilidad</a>
+          </div>
+        </div>
+
+        <div class="moto-card">
+          <img src="images/endure.jpg" alt="Endurance GT Pro" />
+          <div class="moto-info">
+            <h3>Endurance GT Pro</h3>
+            <p class="description">
+              Diseñada para devorar kilómetros con confort y estilo deportivo.
+              Motor V-Twin de 1200cc, suspensión electrónica ajustable, maletas
+              integradas y la última tecnología en asistencia al piloto. Tu
+              compañera ideal para grandes viajes.
+            </p>
+            <p class="price">$19,200 USD</p>
+            <a href="#" class="btn-comprar">Consultar Disponibilidad</a>
+          </div>
+        </div>
+
+        <div class="moto-card">
+          <img src="images/urban.jpg" alt="Urban Sprint 300" />
+          <div class="moto-info">
+            <h3>Urban Sprint 300</h3>
+            <p class="description">
+              La reina de la ciudad. Ligera, manejable y con un consumo
+              eficiente. Motor monocilíndrico de 298cc, perfecta para el tráfico
+              diario y para iniciarse en el mundo de las dos ruedas con estilo y
+              seguridad. ABS de serie.
+            </p>
+            <p class="price">$8,500 USD</p>
+            <a href="#" class="btn-comprar">Consultar Disponibilidad</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        SuperMotos GP - Todos los derechos reservados.
+      </p>
+      <p>
+        <a href="index.html"
+          >Volver al Portafolio de Luis David Ducuara Cadavid</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
